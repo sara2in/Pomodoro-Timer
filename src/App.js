@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Strong from './Views/Strong'
+import Smart from './Views/Smart'
+import Welcome from './Views/Welcome'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Welcome />} /> 
+        <Route path="strong" element={<Strong />} />
+        <Route path="smart" element={<Smart />} />
+      </Routes>
+    </>
   );
 }
 
