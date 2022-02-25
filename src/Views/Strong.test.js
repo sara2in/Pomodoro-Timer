@@ -7,15 +7,25 @@ beforeEach(() => {
   render(<Strong />);
 });
 
-test('stores pushup values when entered and submited', async () => {
-//   const pushUpBox = screen.getByTestId('pushups')
-//   await userEvent.type(pushUpBox, 100)
-  userEvent.click(screen.getByRole('button'));
-  expect(screen.getByText('Pushups Left:')).toBeInTheDocument();
-});
+test('Verify photo is there',() => {
+  const image = screen.getByAltText('Arnold');
+  expect(image).toBeInTheDocument()
+ });
 
-// test('stores work time when entered', async () => {
-//   const time = screen.getByLabelText('How many push ups are you going to do today?')
-//   await userEvent.type(pushUpBox, 100)
-//   expect().toEqual(100);
-// });
+test('What to verify that the pushup textbox takes numbers', async () => {
+  userEvent.click(screen.getByTestId('pushups'));
+  await userEvent.type(100)
+  expect().toBeInTheDocument()
+ });
+
+  test('What to verify that the timer textbox takes numbers', async () => {
+    
+    userEvent.click(screen.getByTestId('time'));
+  await userEvent.type(60)
+  expect().toBeInTheDocument() 
+ });
+
+//  test('When submit button is click data is stored', async () => {
+//   userEvent.click(screen.getByRole('button'));
+//  });
+
