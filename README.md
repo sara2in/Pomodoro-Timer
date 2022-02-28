@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# The Pomodoro Timer
+  This is an app that alows to you select one of two modes.
+  1) Strong mode helps to remind you to do push-ups throughout your workday.
+  2) Smart mode helps to remind you to take breaks in between work/study sessions.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  Apis (Motivaional Quote, Nerdy Joke)
+  Dependencies (MUI)
+  Welcome Page
+  Strong Page
+  Smart Page
 
-## Available Scripts
+## Welcome Page
+Here you have two buttons to click on to take you to the Strong or Smart mode.
 
-In the project directory, you can run:
+## Strong Page
+Here you can enter how many hours you will be working and how many push ups you would like to complete.
+Once you hit submit it will calculate how many pushups you need to do each hour and give you a reminder notification that includes a motivational quote.
+There is also an Arnold head home button to go back to the home page.
 
-### `npm start`
+## Smart Page
+Here you can click the start button to begin your 52 minute work or study session.
+You will be able to see a countdown so you can track how much time you have left in a session.
+Once the timer hits 0 you will get a notification that it is time for a break along with a joke to make you laugh.
+Then you will get a 17 minute break in which you will see another timer counting down.
+After your break click Keep Working to begin your next session.
+There is also an Arnold head home button to go back to the home page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## APIs
+This app uses two different APIs
+1) The Strong page uses this API to pull motivational quotes. 
+  'https://api.quotable.io/search/quotes?query=determination'
+2) The Smart page uses this API to pull nerdy jokes.
+  'https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single'
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Dependencies
+In order to run this you will need to install React and Material UI
