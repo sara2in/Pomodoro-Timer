@@ -7,25 +7,25 @@ beforeEach(() => {
   render(<Strong />);
 });
 
+test('There is an h1 that gives you an order',() => {
+  expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+ });
+
+test('There is an href back to the welcome page',() => {
+  expect(screen.getByRole('link')).toBeInTheDocument();
+ });
+
 test('Verify photo is there',() => {
   const image = screen.getByAltText('Arnold');
   expect(image).toBeInTheDocument()
  });
 
-test('What to verify that the pushup textbox takes numbers', async () => {
-  userEvent.click(screen.getByTestId('pushups'));
-  await userEvent.type(100)
-  expect().toBeInTheDocument()
- });
+ test('There is a text field for pushups',() => {
+  expect(screen.getByTestId('pushups', {name: "inputs"})).toBeInTheDocument();
+});
 
-  test('What to verify that the timer textbox takes numbers', async () => {
-    
-    userEvent.click(screen.getByTestId('time'));
-  await userEvent.type(60)
-  expect().toBeInTheDocument() 
- });
+ test('There is a submit button ',() => {
+  expect(screen.getByRole('button', {name: "Submit"})).toBeInTheDocument();
+});
 
-//  test('When submit button is click data is stored', async () => {
-//   userEvent.click(screen.getByRole('button'));
-//  });
 
