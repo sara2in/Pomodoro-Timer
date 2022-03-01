@@ -16,6 +16,7 @@ Here you have two buttons to click on to take you to the Strong or Smart mode.
 ## Strong Page
 Here you can enter how many hours you will be working and how many push ups you would like to complete.
 Once you hit submit it will calculate how many pushups you need to do each hour and give you a reminder notification that includes a motivational quote.
+On the popup you have the option to Pass on a set (which you can only do once) and to click Done! which logs the set you have completed.
 There is also an Arnold head home button to go back to the home page.
 
 ## Smart Page
@@ -34,4 +35,4 @@ This app uses two different APIs
   'https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single'
 
 ## Dependencies
-In order to run this you will need to install React and Material UI
+Run NPM install.

@@ -22,4 +22,4 @@ beforeEach(() => {
   
    test('Verify that there is a start button', () => {
     expect(screen.getByText('Start')).toBeInTheDocument
-   })
+   });

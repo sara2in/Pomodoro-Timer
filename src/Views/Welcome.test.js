@@ -8,8 +8,6 @@ beforeEach(() => {
     render(<App />);
   });
 
-v
-
    test('There is an h3 that asks the user a question',() => {
     expect(screen.getByRole('heading', { level: 3 })).toBeInTheDocument();
    });

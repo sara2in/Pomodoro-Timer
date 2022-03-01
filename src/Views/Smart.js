@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import './App.css';
+import './Views.css';
 import Relax from '../assets/relax.mp3'
 import ArnoldSmart from '../assets/smart-arnold.jpeg';
 import arnoldIcon from '../assets/arnoldIcon.png'
@@ -30,6 +30,7 @@ export default function Strong() {
     const handleClose = () => {
         setSeconds(52*60)
         // setSeconds(5)
+        setIsActive(true);
         setOpen(false)
     }
 
@@ -52,7 +53,7 @@ export default function Strong() {
                 setQuote(data.joke)
             })
             .catch((err) => {
-                // setError("No Products Found");
+                console.error(err)
             });
     }
 

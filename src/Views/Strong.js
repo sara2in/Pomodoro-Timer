@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import './App.css';
+import './Views.css';
 import Arnold from '../assets/Arnold.jpg';
 import arnoldIcon from '../assets/arnoldIcon.png'
 import Choppa from '../assets/choppa.mp3'
@@ -50,8 +50,8 @@ export default function Strong() {
         let a = event.target.value.split(':'); // split it at the colons
         // minutes are worth 60 seconds. Hours are worth 60 minutes.
         let secondsFromHMS = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
-        pushupMath(a[0])
         setSeconds(secondsFromHMS)
+        pushupMath(a[0])
     }
 
     function handleClick() {
@@ -79,7 +79,7 @@ export default function Strong() {
                 setQuote(data.results[randomIndex].content)
             })
             .catch((err) => {
-                // setError("No Products Found");
+                console.error(err)
             });
     }
 
@@ -94,18 +94,18 @@ export default function Strong() {
             interval = setInterval(() => {
                 setSeconds(seconds => seconds - 1);
             }, 1000);
-
+            //Format to HMS from seconds
             let hours = Math.floor(seconds / 3600); // get hours
             let minutes = Math.floor((seconds - (hours * 3600)) / 60); // get minutes           
             seconds = seconds - (hours * 3600) - (minutes * 60); //  get seconds
-            // add 0 if value < 10; Example: 2 => 02
             if (hours < 10) { hours = "0" + hours; }
             if (minutes < 10) { minutes = "0" + minutes; }
             if (seconds < 10) { seconds = "0" + seconds; }
-            if ((minutes == 0) && (seconds == 0)) { handleOpen() }
-            // if ((minutes == 59) && (seconds == 55)) { handleOpen() }
-            if ((hours == 0) && (minutes == 0) && (seconds == 0)) { toggleTimer() }
             setHMS(hours + ':' + minutes + ':' + seconds) // Return is HH : MM : SS
+            //Open at the top of every hour
+            if ((minutes == 0) && (seconds == 0)) { handleOpen() }
+            //Stop timer at 0
+            if ((hours == 0) && (minutes == 0) && (seconds == 0)) { toggleTimer() }
         } else if (!isActive && seconds !== 0) {
             clearInterval(interval);
         }

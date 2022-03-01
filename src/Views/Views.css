@@ -7,5 +7,6 @@
 
 .inputs{
     width: 10%;
+    /* important for overriding MUI */
     margin:15px !important;
 }
